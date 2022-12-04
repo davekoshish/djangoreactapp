@@ -26,7 +26,7 @@ SECRET_KEY = 'f=mc0a(7sdyt3vw&505h+d-uu!v8#uflyhd8rd5pag+p2ey=r5'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['*','.vercel.app','.now.shpy']
 
 
 # Application definition
@@ -147,10 +147,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-STATIC_ROOT =os.path.join(BASE_DIR,'staticfiles_build','static')
+
 STATIC_URL = '/static/'
-STATICFILES_DIRS=[os.path.join(BASE_DIR,'frontend/build/static'),
-            os.path.join(BASE_DIR,'staticfiles_build','static')]
+STATICFILES_DIRS=[ os.path.join(BASE_DIR,'frontend/build/static'),]
 MEDIA_URL= '/media/'
 MEDIA_ROOT= os.path.join(BASE_DIR,'media')
 CORS_ALLOW_METHODS='GET, POST, PUT, DELETE, OPTIONS'
