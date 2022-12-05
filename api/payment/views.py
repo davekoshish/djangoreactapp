@@ -8,16 +8,16 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse,JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 
-import braintree
+#import braintree
 
-gateway = braintree.BraintreeGateway(
-    braintree.Configuration(
-        braintree.Environment.Sandbox,
-        merchant_id="xp56m82yjmbvnz29",
-        public_key="565m7gqysn9kxcv5",
-        private_key="07c58e1bcf21ab0959e66bd7a52d6161"
-    )
-)
+#gateway = braintree.BraintreeGateway(
+ #   braintree.Configuration(
+  #      braintree.Environment.Sandbox,
+   #     merchant_id="xp56m82yjmbvnz29",
+    #    public_key="565m7gqysn9kxcv5",
+     #   private_key="07c58e1bcf21ab0959e66bd7a52d6161"
+    #)
+#)
 
 def validate_user_id(id,token):
     UserModel=get_user_model()
