@@ -158,6 +158,7 @@ CORS_ORIGIN_ALLOW_ALL=True
 
 CORS_ORIGIN_WHITELIST=['http://localhost:3000']
 
+SILENCED_SYSTEM_CHECKS = ['urls.W002', 'security.W019']
 REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
     # or allow read-only access for unauthenticated users.
@@ -174,4 +175,6 @@ REST_FRAMEWORK = {
     ]
 }
 
+
 AUTH_USER_MODEL = "user.CustomUser"
+DEFAULT_AUTO_FIELD='django.db.models.AutoField'
